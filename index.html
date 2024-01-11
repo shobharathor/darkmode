@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.js"></script>
+<!-- git  <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>   -->
+     
+<link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>  
+<script src="https://unpkg.com/scrollreveal"></script>
+    
+      <title>DarkLightMode</title>
+
+</head>
+<body>
+    <nav>
+   <div class="nav-wrapper container">
+    <div class="logo"><a href="">LOGO</a></div>
+    <div class="bar-lines">
+      <i class="ri-menu-line" id="menu-bar"></i>
+     </div>
+        <ul class="menu" id="menu">
+          <div class="close">
+            <i class="ri-close-circle-line" id="close-circle"></i>
+          </div>
+         <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Chef</a></li>
+        <li><a href="">Blog</a></li>
+        <li><a href="">Reservation</a></li>
+    </ul>
+   <div>
+   <ion-icon name="moon-outline" class="switch"></ion-icon>
+   </div>
+</div>
+</nav>
+<section class="hero-section">
+    <div class="container hero-wrapper">
+        <div>
+            <h1>Wok In & Wok Out</h1>
+            <p>The first bite will blow your mind. The second will transport you to another dimension.</p>
+            <a href="" class="btn">Order Now</a>
+        </div>
+        <div>
+            <img src="images/istockphoto-1190330112-612x612-removebg-preview.png" alt="#">
+        </div>
+        <div class="scroll">
+           <a href=""><i class="ri-arrow-drop-down-fill"></i></a> 
+          </div>
+
+    </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+   $(".switch").click(function(){
+     $("body").toggleClass("dark-mode");
+     if($("body").hasClass("dark-mode")){
+        $(".switch").attr("name","sunny-outline");
+     }
+     else{
+        $(".switch").attr("name","moon-outline");
+     }
+   }); 
+
+   let sr = ScrollReveal({
+     distance : `65px`,
+     duration : 2600,
+       delay:450,
+     reset : true
+
+   });
+
+   sr.reveal(`.nav-wrapper` ,{delay:200, origin:`top`});
+   sr.reveal(`.container` ,{delay:200, origin:`top`});
+
+   const  bar = document.getElementById("menu-bar")
+   const menu = document.getElementById("menu");
+   const closetag = document.getElementById("close-circle")
+   const bar2 = document.querySelector(".bar-lines");
+   
+   
+    bar2.onclick =(e) =>{
+      console.log(e.target);
+
+    }
+    bar2.addEventListener('click',function(e){
+      if(e.target.id === 'menu-bar'){
+        console.log(hi);
+      }
+
+      console.log(e.target);
+          
+
+    });
+
+
+   bar.onclick = (e) => {
+     console.log(menu);
+     console.log(e.target);
+
+    
+     menu.style.right = "0px";
+    //  menu.style.display = "flex";
+   }
+
+   closetag.onclick = () => {
+      console.log(hi);
+      menu.style.right = "-130px";
+
+   }
+
+
+
+
+  
+
+</script>
+
+
+    
+</body>
+</html>
