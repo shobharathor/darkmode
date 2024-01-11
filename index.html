@@ -68,50 +68,35 @@
      }
    }); 
 
-   let sr = ScrollReveal({
-     distance : `65px`,
-     duration : 2600,
-       delay:450,
-     reset : true
+  //  let sr = ScrollReveal({
+  //    distance : `65px`,
+  //    duration : 2600,
+  //      delay:450,
+  //    reset : true
 
-   });
+  //  });
 
-   sr.reveal(`.nav-wrapper` ,{delay:200, origin:`top`});
-   sr.reveal(`.container` ,{delay:200, origin:`top`});
+  //  sr.reveal(`.nav-wrapper` ,{delay:200, origin:`top`});
+  //  sr.reveal(`.container` ,{delay:200, origin:`top`});
 
    const  bar = document.getElementById("menu-bar")
    const menu = document.getElementById("menu");
    const closetag = document.getElementById("close-circle")
-   const bar2 = document.querySelector(".bar-lines");
+  
    
    
-    bar2.onclick =(e) =>{
-      console.log(e.target);
+    bar.onclick =() =>{
+     console.log(menu);
+     menu.style.left = "5px"
+   
 
     }
-    bar2.addEventListener('click',function(e){
-      if(e.target.id === 'menu-bar'){
-        console.log(hi);
-      }
-
-      console.log(e.target);
-          
-
-    });
-
-
-   bar.onclick = (e) => {
-     console.log(menu);
-     console.log(e.target);
-
     
-     menu.style.right = "0px";
-    //  menu.style.display = "flex";
-   }
+
 
    closetag.onclick = () => {
-      console.log(hi);
-      menu.style.right = "-130px";
+      console.log("hi");
+      menu.style.left = "-130px";
 
    }
 

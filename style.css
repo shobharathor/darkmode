@@ -11,7 +11,7 @@
 
 .dark-mode{
     --primary:#D81E0C;
-    --secondary :#fbf5f5;
+    --secondary :#2cc860;
     --background: #1B1B1B;
 
 }
@@ -50,7 +50,7 @@ ul{
 .container{
     width:80%;
     margin: auto;
-    padding:0 15px;
+    padding:0 10px;
     min-width:250px;
     max-width: 1550px;
     flex-wrap: wrap;
@@ -93,7 +93,10 @@ nav a:hover{
 .menu {
     display:flex;
     position: relative;
-    right:-130px;
+    left: 5px; 
+   
+
+   
 }
  ul a:hover{
     color: var(--primary);
@@ -169,9 +172,21 @@ nav a:hover{
         display:block;
     }
 
-   /* .menu{
-    display:none;
-    } */
+    .menu{
+        position: absolute;
+        top:0;
+        left: -130px;
+        width:150px;
+        height:100vh;
+        background: beige;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding:11px 10px;
+        transition: all .55s ease;
+        z-index: 2000;
+    } 
 
     .close{
         display: block;
