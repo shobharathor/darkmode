@@ -17,8 +17,8 @@
 }
 .scroll{
     position: absolute;
-    bottom:0px;
-    right:50%;
+    bottom:5px;
+    right:5%;
     
 }
 .scroll i{

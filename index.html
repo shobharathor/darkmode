@@ -68,17 +68,7 @@
      }
    }); 
 
-  //  let sr = ScrollReveal({
-  //    distance : `65px`,
-  //    duration : 2600,
-  //      delay:450,
-  //    reset : true
-
-  //  });
-
-  //  sr.reveal(`.nav-wrapper` ,{delay:200, origin:`top`});
-  //  sr.reveal(`.container` ,{delay:200, origin:`top`});
-
+ 
    const  bar = document.getElementById("menu-bar")
    const menu = document.getElementById("menu");
    const closetag = document.getElementById("close-circle")
@@ -99,6 +89,19 @@
       menu.style.left = "-130px";
 
    }
+
+
+     let sr = ScrollReveal({
+     distance : `65px`,
+     duration : 2600,
+      delay:450,
+     reset : true
+
+   });
+
+   sr.reveal(`nav` ,{delay:200, origin:`top`});
+   sr.reveal(`container` ,{delay:200, origin:`top`});
+   
 
 
 
